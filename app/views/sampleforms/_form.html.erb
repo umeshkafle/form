@@ -1,0 +1,30 @@
+<%= form_for :sampleform, url: {action:"create"} do |f|%>
+
+<p>
+<%= f.label :firstname%>
+<%= f.text_field :firstname%>
+</p>
+
+<p>
+<%= f.label :lastname%>
+<%= f.text_field :lastname%>
+</p>
+
+<p>
+<%= f.label :gender%>
+<%= f.radio_button :gender, "Male", :cjecked=>true %>Male
+<%= f.radio_button :gender, "Female"%>Female
+</p>
+
+<p>
+<%= f.label :address%></p><br/>
+<%= f.text_area :address, :cols=>"39", :rows=>"7"%>
+</p>
+
+<p>
+<%= f.label :country%>
+<%= f.select :country,["Nepal", "USA", "UK", "Canada"]%>
+</p>
+
+<%= submit_tag("Submit")%>
+<%end%>
